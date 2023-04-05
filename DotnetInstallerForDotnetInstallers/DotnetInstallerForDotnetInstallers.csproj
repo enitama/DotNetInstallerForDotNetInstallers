@@ -5,14 +5,25 @@
     <!--<TargetFrameworks>netstandard2.0;net35</TargetFrameworks>-->
     <LangVersion>11.0</LangVersion>
     <Nullable>enable</Nullable>
+    <Version>0.0.1</Version>
+    <Copyright>Copyright (c) 2023 enitama and contributors</Copyright>
+    <Description>Utilities to install .NET for installers written in .NET </Description>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageId>DotnetInstallerForDotnetInstallers</PackageId>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/enitama/DotnetInstallerForDotnetInstallers</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/enitama/DotnetInstallerForDotnetInstallers</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE" Pack="true" PackagePath="" />
+    <None Include="..\README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="IsExternalInit" Version="1.0.3" PrivateAssets="all" />
     <PackageReference Include="QuickJson" Version="1.0.0" PrivateAssets="all" />
-  </ItemGroup>
-
-  <ItemGroup>
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)'=='net35'">

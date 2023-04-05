@@ -2,11 +2,18 @@
 
 This is a set of utilities for installers written in .NET, to let you, yes, install .NET.
 
-**WARNING:** At time of writing, this has been *completely untested*. This package is being uploaded to NuGet for *testing purposes only*.
+🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨
+
+**WARNING:**
+At time of writing, this package has been *completely untested*.
+This package is being uploaded to NuGet for *testing purposes only*.
+DO NOT USE THIS PACKAGE UNLESS YOU KNOW WHAT YOU ARE DOING!
+
+🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨
 
 ## Install
 
-Coming soon... this is being extracted out of another project of mine...
+- 📦 [NuGet](https://www.nuget.org/packages/DotnetInstallerForDotnetInstallers): `dotnet add package DotnetInstallerForDotnetInstallers`
 
 ## Why?
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotNetInstallerForDotNetInstallers
+namespace DotnetInstallerForDotnetInstallers
 {
     public class Class1
     {

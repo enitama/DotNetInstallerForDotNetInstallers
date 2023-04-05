@@ -1,4 +1,4 @@
-# DotNetInstallerForDotNetInstallers
+# DotnetInstallerForDotnetInstallers
 
 This is a set of utilities for installers written in .NET, to let you, yes, install .NET. (And the Windows App SDK.)
 
@@ -20,7 +20,11 @@ Once again however, with the evolution of .NET Framework into .NET Core (now sim
 
 Not anymore, there *are* alternatives! For instance, .NET Core 3 introduced self-contained deployment, .NET 7 introduced the beginnings of native AOT deployment, and .NET 8 is improving on native AOT further.
 
-But... what if you *would* like to take the classic approach of downloading and installing modern .NET prerequisites on behalf of your users? If your installer is written with .NET Framework (such as a WiX bootstrapper), this project can help you achieve that.
+But... what if you *would* like to take the classic approach of downloading and installing modern .NET prerequisites on behalf of your users?
+
+There's a fantastic project called **[DotnetRuntimeBootstrapper](https://github.com/Tyrrrz/DotnetRuntimeBootstrapper)** that can wrap your application executable in a bootstrapper that takes care of installing the target .NET runtime automatically. However, it's designed exactly to do that, *not* do so at time of installing your application. Please consider using it if that works for your use case.
+
+You can consider using **DotnetInstallerForDotnetInstallers** instead if your application's installer is written in .NET (e.g. a WiX bootstrapper), and you'd prefer to install .NET prerequisites along with your application. This project reuses much of the great work done in DotnetRuntimeBootstrapper, adapting it for standalone use, which you can then use in your installer.
 
 In other words, install .NET, with your installer written in .NET.
 

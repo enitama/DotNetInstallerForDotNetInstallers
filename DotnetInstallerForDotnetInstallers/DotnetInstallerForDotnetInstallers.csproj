@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net35</TargetFrameworks>
+    <LangVersion>11.0</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IsExternalInit" Version="1.0.3" PrivateAssets="all" />
+    <PackageReference Include="QuickJson" Version="1.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Management" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\DotnetRuntimeBootstrapper\DotnetRuntimeBootstrapper.AppHost.Core\**\*.cs" Exclude="..\DotnetRuntimeBootstrapper\DotnetRuntimeBootstrapper.AppHost.Core\Dotnet\DotnetHost.cs;..\DotnetRuntimeBootstrapper\DotnetRuntimeBootstrapper.AppHost.Core\BootstrapperBase.cs;..\DotnetRuntimeBootstrapper\DotnetRuntimeBootstrapper.AppHost.Core\TargetAssembly.cs">
+      <Link>DotnetRuntimeBootstrapper.AppHost.Core\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
+ 
+</Project>

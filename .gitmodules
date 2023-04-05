@@ -1,0 +1,3 @@
+[submodule "DotnetRuntimeBootstrapper"]
+	path = DotnetRuntimeBootstrapper
+	url = https://github.com/Tyrrrz/DotnetRuntimeBootstrapper.git

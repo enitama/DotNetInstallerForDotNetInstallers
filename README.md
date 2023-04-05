@@ -2,6 +2,8 @@
 
 This is a set of utilities for installers written in .NET, to let you, yes, install .NET.
 
+**WARNING:** At time of writing, this has been *completely untested*. This package is being uploaded to NuGet for *testing purposes only*.
+
 ## Install
 
 Coming soon... this is being extracted out of another project of mine...
@@ -30,5 +32,5 @@ In other words, install .NET, with your installer written in .NET.
 
 ## Features
 
-- Coming soon: Install .NET (this project is being extracted out of another project of mine)
-- Coming soon: Bonus: Install Windows App SDK (requires .NET Framework 4.6.1+)
+- Install .NET
+- Bonus: Install Windows App SDK (requires .NET Framework 4.6.1+)

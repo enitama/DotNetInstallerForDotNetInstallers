@@ -5,19 +5,19 @@ using System;
 using Windows.ApplicationModel;
 using Windows.Management.Deployment;
 
-namespace DotnetInstallerForDotnetInstallers
+namespace DotnetInstallerForDotnetInstallers.Core
 {
     internal class WindowsAppSDKPrerequisite : IPrerequisite
     {
-        private string _displayVersion;
+        private string _fullVersion;
         private string _packageVersionString;
         private PackageVersion _packageVersion;
 
-        public string DisplayName => $"Windows App SDK {_displayVersion} (";
+        public string DisplayName => $"Windows App SDK {_fullVersion} (";
 
-        public WindowsAppSDKPrerequisite(string displayVersion, string packageVersion)
+        public WindowsAppSDKPrerequisite(string fullVersion, string packageVersion)
         {
-            _displayVersion = displayVersion;
+            _fullVersion = fullVersion;
             _packageVersionString = packageVersion;
             var parsedVersion = new Version(packageVersion);
             _packageVersion = new PackageVersion { Major = (ushort)parsedVersion.Major, Minor = (ushort)parsedVersion.Minor, Build = (ushort)parsedVersion.Build, Revision = (ushort)parsedVersion.Revision };
@@ -70,10 +70,17 @@ namespace DotnetInstallerForDotnetInstallers
 
         private static ulong ToVersion(PackageVersion packageVersion)
         {
-            return ((ulong)packageVersion.Major << 48) |
-                   ((ulong)packageVersion.Minor << 32) |
-                   ((ulong)packageVersion.Build << 16) |
+            return (ulong)packageVersion.Major << 48 |
+                   (ulong)packageVersion.Minor << 32 |
+                   (ulong)packageVersion.Build << 16 |
+
+/* Unmerged change from project 'DotnetInstallerForDotnetInstallers (net35)'
+Before:
                    ((ulong)packageVersion.Revision);
+After:
+                   (ulong)packageVersion.Revision);
+*/
+                   packageVersion.Revision;
         }
     }
 }

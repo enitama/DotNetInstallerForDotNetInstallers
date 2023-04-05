@@ -2,7 +2,7 @@
 using DotnetRuntimeBootstrapper.AppHost.Core.Utils;
 using System;
 
-namespace DotnetInstallerForDotnetInstallers
+namespace DotnetInstallerForDotnetInstallers.Core
 {
     internal class WindowsAppSDKPrerequisiteInstaller : IPrerequisiteInstaller
     {
